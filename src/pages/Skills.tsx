@@ -2,9 +2,32 @@ import React, { useEffect, useState } from 'react';
 import './Skills.css';
 import { getSkills } from '../queries/getSkills';
 
-import { FaReact, FaNodeJs, FaAws, FaDocker, FaGitAlt, FaJava } from 'react-icons/fa';
-import { SiRubyonrails, SiTypescript, SiPostgresql, SiMysql, SiKubernetes, SiGooglecloud, SiSpringboot, SiPhp, SiNetlify, SiHeroku, SiHtml5, SiCss3, SiRabbitmq, SiImessage, SiPython } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaAws, FaDocker, FaJava } from 'react-icons/fa';
+import { SiRubyonrails, SiTypescript, SiPostgresql, SiMysql, SiKubernetes, SiGooglecloud, SiSpringboot, SiPhp, SiNetlify, SiHeroku, SiRabbitmq, SiImessage, SiPython } from 'react-icons/si';
 import { Skill } from '../types';
+
+// Import local images
+import cppImage from '../images/C++.png';
+import gitImage from '../images/git.png';
+import javaImage from '../images/java.jpeg';
+import mlImage from '../images/ml.jpg';
+import pythonImage from '../images/Python-logo-notext.svg.png';
+
+// Additional skill images uploaded by user
+import opencvImage from '../images/Computer-Vision.jpg';
+import mediapipeImage from '../images/mediapipe.png';
+import tensorflowImage from '../images/TensorFlow_logo.png';
+import stableBaselinesImage from '../images/stable baselines3.jpg';
+import flaskImage from '../images/flask.png';
+import fastapiImage from '../images/fastapi.png';
+import streamlitImage from '../images/streamlit.png';
+import celeryImage from '../images/celery.jpg';
+import reactImage from '../images/react.png';
+import typescriptImage from '../images/type script.png';
+import tailwindcssImage from '../images/tailwandcss.png';
+import rechartsImage from '../images/recharts.jpg';
+import redisImage from '../images/redis.png';
+import dockerImage from '../images/dcker.png';
 
 const iconMap: { [key: string]: JSX.Element } = {
   SiRubyonrails: <SiRubyonrails />,
@@ -28,23 +51,37 @@ const iconMap: { [key: string]: JSX.Element } = {
 };
 
 const skillImages: { [key: string]: string } = {
-  'Python': 'https://picsum.photos/id/193/400/300',
-  'React': 'https://picsum.photos/id/139/400/300',
+  'Python': pythonImage,
+  'React': reactImage,
   'JavaScript': 'https://picsum.photos/id/151/400/300',
-  'Java': 'https://picsum.photos/id/174/400/300',
+  'Java': javaImage,
   'Node.js': 'https://picsum.photos/id/180/400/300',
   'Ruby on Rails': 'https://picsum.photos/id/92/400/300',
   'Spring Boot': 'https://picsum.photos/id/120/400/300',
-  'TypeScript': 'https://picsum.photos/id/151/400/300',
   'HTML5': 'https://picsum.photos/id/181/400/300',
   'CSS3': 'https://picsum.photos/id/199/400/300',
   'MySQL': 'https://picsum.photos/id/168/400/300',
   'PostgreSQL': 'https://picsum.photos/id/168/400/300',
   'AWS': 'https://picsum.photos/id/207/400/300',
-  'Docker': 'https://picsum.photos/id/179/400/300',
+  'Docker': dockerImage,
   'Kubernetes': 'https://picsum.photos/id/195/400/300',
   'Google Cloud': 'https://picsum.photos/id/201/400/300',
   'Git': 'https://picsum.photos/id/198/400/300',
+  'C++': cppImage,
+  'Git & GitHub': gitImage,
+  'Machine Learning': mlImage,
+  'OpenCV': opencvImage,
+  'MediaPipe': mediapipeImage,
+  'TensorFlow': tensorflowImage,
+  'Stable-Baselines3': stableBaselinesImage,
+  'Flask': flaskImage,
+  'FastAPI': fastapiImage,
+  'Streamlit': streamlitImage,
+  'Celery': celeryImage,
+  'TypeScript': typescriptImage,
+  'TailwindCSS': tailwindcssImage,
+  'Recharts': rechartsImage,
+  'Redis': redisImage,
 };
 
 const Skills: React.FC = () => {
