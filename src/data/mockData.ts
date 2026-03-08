@@ -239,14 +239,14 @@ export const mockSkills = [
     category: "Core Competencies",
     description: "Image processing and object detection",
     icon: "FaReact",
-    image: require("./images/Computer-Vision.jpg"),
+    image: require("../images/Computer-Vision.jpg"),
   },
   {
     name: "Data Analytics",
     category: "Core Competencies",
     description: "Data analysis, visualization, and insights",
     icon: "SiPostgresql",
-    image: require("./images/data analy.jpg"),
+    image: require("../images/data analy.jpg"),
   },
   {
     name: "DSA",
