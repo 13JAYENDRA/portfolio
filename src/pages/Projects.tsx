@@ -5,6 +5,7 @@ import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCs
 import { Project } from '../types';
 import { getProjects } from '../queries/getProjects';
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
+import { SiTypescript } from 'react-icons/si';
 
 const techIcons: { [key: string]: JSX.Element } = {
   "ReactJS": <FaReact />,
@@ -57,6 +58,12 @@ const techIcons: { [key: string]: JSX.Element } = {
   'Tailwind CSS': <SiCss3 />,
   'Bootstrap': <SiCss3 />,
   'JQuery': <SiJquery />,
+  'TypeScript': <SiTypescript />,
+  'AI': <FaReact />,
+  'Analytics': <FaDatabase />,
+  'NLP': <FaPython />,
+  'SQL': <FaDatabase />,
+  'LLMs': <FaPython />,
 };
 
 
@@ -85,7 +92,16 @@ const Projects: React.FC = () => {
           >
             <img src={project.image.url} alt={project.title} className="project-image" />
             <div className="project-details">
-              <h3>{project.title}</h3>
+              <div className="project-header">
+                <h3>{project.title}</h3>
+                {project.tags && project.tags.length > 0 && (
+                  <div className="project-tags">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="project-tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
               <p>{project.description}</p>
               <div className="tech-used">
                 {project.techUsed.split(', ').map((tech, i) => (
@@ -94,6 +110,16 @@ const Projects: React.FC = () => {
                   </span>
                 ))}
               </div>
+              {project.githubLink && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link-btn"
+                >
+                  <FaGithub /> GitHub Repository
+                </a>
+              )}
             </div>
           </div>
         ))}

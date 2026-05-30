@@ -29,6 +29,22 @@ export const mockContactMe = {
 // Mock data for timeline items
 export const mockTimeline = [
   {
+    name: "Sthapatya Consultants",
+    timelineType: "work" as const,
+    title: "AI Developer Intern",
+    techStack: "RAG, LLMs, ResNet50, SAM, YOLO, GeoTIFF, Python",
+    summaryPoints: [
+      "Developed a RAG-based AI Chatbot and Report Engine enabling users to query and auto-generate crystal reports for 3 municipal Corporations, powering smart city analytics across large-scale civic datasets.",
+      "Fine-tuned an end-to-end pipeline where users upload GeoTIFF images and receive shapefiles with auto-marked properties for taxation, leveraging ResNet50 and SAM (Segment Anything Model) for high-accuracy segmentation.",
+      "Built a YOLO-based image validation system to auto-accept or reject photos, improving data quality and automation accuracy.",
+      "Created a multilingual Text-to-SQL system enabling natural language queries over enterprise databases.",
+      "Developed Financial AI solutions for intelligent financial data analysis, automated reporting, and decision-support workflows.",
+      "Designed and enhanced Text2SQL systems enabling business users to interact with enterprise databases through natural language queries.",
+    ],
+    dateRange: "Mar 2026 – Present",
+    location: "Amravati, Maharashtra",
+  },
+  {
     name: "Prodigal AI",
     timelineType: "work" as const,
     title: "Gen AI Intern",
@@ -38,7 +54,7 @@ export const mockTimeline = [
       "Implemented speech-to-text processing and AI captioning, improving video accessibility and synchronization accuracy",
       "Built and optimized Python backend services, integrated 5+ REST APIs, and used JWT authentication for secure and scalable systems",
     ],
-    dateRange: "Sept 2025 - Feb 2026",
+    dateRange: "Sept 2025 – Feb 2026",
   },
   {
     name: "TPP Consultation",
@@ -85,7 +101,7 @@ export const mockSkills = [
     category: "Programming Languages",
     description: "Object-oriented programming and competitive coding",
     icon: "FaJava",
-    image: require("../images/C++.png"),
+    image: require("../images/cpp.png"),
   },
   {
     name: "Python",
@@ -127,7 +143,7 @@ export const mockSkills = [
     category: "Technologies & Frameworks",
     description: "Reinforcement learning algorithms",
     icon: "FaNodeJs",
-    image: require("../images/stable baselines3.jpg"),
+    image: require("../images/stable-baselines3.jpg"),
   },
   {
     name: "Flask",
@@ -169,7 +185,7 @@ export const mockSkills = [
     category: "Technologies & Frameworks",
     description: "Typed superset of JavaScript for scalable applications",
     icon: "SiTypescript",
-    image: require("../images/type script.png"),
+    image: require("../images/typescript.png"),
   },
   {
     name: "TailwindCSS",
@@ -246,7 +262,7 @@ export const mockSkills = [
     category: "Core Competencies",
     description: "Data analysis, visualization, and insights",
     icon: "SiPostgresql",
-    image: require("../images/data analy.jpg"),
+    image: require("../images/data-analytics.jpg"),
   },
   {
     name: "DSA",
@@ -266,6 +282,28 @@ export const mockWorkPermit = {
 };
 
 export const mockProjects = [
+  {
+    title: "Financial AI",
+    description:
+      "Developed an AI-powered financial analytics platform for intelligent financial insights and decision support. Implemented automated data processing and interactive dashboards for financial trend analysis. Built scalable TypeScript-based architecture supporting real-time financial data workflows.",
+    techUsed: "TypeScript, React, Python, Analytics, AI",
+    tags: ["AI", "Analytics"],
+    githubLink: "https://github.com/jayendra-r/financial-ai",
+    image: {
+      url: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+    },
+  },
+  {
+    title: "Text2SQL",
+    description:
+      "Developed a natural language to SQL conversion system enabling users to query databases using plain English. Integrated LLM-powered query generation with automatic SQL execution and structured output retrieval. Supported multilingual text and voice-based database interaction.",
+    techUsed: "Python, NLP, SQL, LLMs",
+    tags: ["Python", "LLMs", "NLP", "SQL"],
+    githubLink: "https://github.com/jayendra-r/text2sql",
+    image: {
+      url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    },
+  },
   {
     title: "Intelligent Analytics Platform",
     description:

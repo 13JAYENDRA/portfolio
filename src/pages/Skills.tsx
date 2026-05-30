@@ -7,7 +7,7 @@ import { SiRubyonrails, SiTypescript, SiPostgresql, SiMysql, SiKubernetes, SiGoo
 import { Skill } from '../types';
 
 // Import local images
-import cppImage from '../images/C++.png';
+import cppImage from '../images/cpp.png';
 import gitImage from '../images/git.png';
 import javaImage from '../images/java.jpeg';
 import mlImage from '../images/ml.jpg';
@@ -17,13 +17,13 @@ import pythonImage from '../images/Python-logo-notext.svg.png';
 import opencvImage from '../images/Computer-Vision.jpg';
 import mediapipeImage from '../images/mediapipe.png';
 import tensorflowImage from '../images/TensorFlow_logo.png';
-import stableBaselinesImage from '../images/stable baselines3.jpg';
+import stableBaselinesImage from '../images/stable-baselines3.jpg';
 import flaskImage from '../images/flask.png';
 import fastapiImage from '../images/fastapi.png';
 import streamlitImage from '../images/streamlit.png';
 import celeryImage from '../images/celery.jpg';
 import reactImage from '../images/react.png';
-import typescriptImage from '../images/type script.png';
+import typescriptImage from '../images/typescript.png';
 import tailwindcssImage from '../images/tailwandcss.png';
 import rechartsImage from '../images/recharts.jpg';
 import redisImage from '../images/redis.png';
